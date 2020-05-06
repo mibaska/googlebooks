@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from "react";
-import API from "../utils/API";
-import { Link } from "react-router-dom";
+import React from "react";
 
 function Search() {
-  const [search, setSearch] = useState([])
-  
   return (
     <div>
       <form class="form-inline my-2 my-lg-0">

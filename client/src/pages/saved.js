@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import API from "../utils/API";
+import {Container, Row, Col} from "../components/Grid";
+import {List, ListItem} from "../components/List";
+import DeleteBtn from "../components/DeleteBtn";
 import { Link } from "react-router-dom";
 
 function Saved() {
@@ -29,11 +32,11 @@ function Saved() {
         <Col size="md-6 sm-12">
           {saved.length ? (
             <List>
-              {books.map(book => (
+              {Saved.map(book => (
                 <ListItem key={book._id}>
                   <Link to={"/books/" + book._id}>
                     <strong>
-                      {book.title} by {book.author}
+                      {book.title} by {book.authors}
                     </strong>
                   </Link>
                   <DeleteBtn onClick={() => deleteBook(book._id)} />
